@@ -13,10 +13,12 @@
 <div class="container mx-auto">
     <div class="p-4 text-gray-800 bg-gray-400">
         <h1 class="mb-9 text-6xl font-bold leading-none tracking-tight text-gray-800 text-center"><?php echo $article['title'];?></h1>
-        <p class="leading-normal text-center"><?php echo $article['contenu'];?></p>
+        <p class="leading-normal text-center break-words"><?php echo $article['contenu'];?></p>
         <div class="flex justify-between items-center">
             <div class="md:text-4xl">Jan 13 7 PM</div>
-            <a href="/articles/<?php echo $article['slug']?>/delete"><i class="far fa-trash-alt bg-red-500 p-4"></i></a>
+            <form action="/articles/<?php echo $article['slug']?>/delete" method="post">
+            <button type="submit"><i class="far fa-trash-alt bg-red-500 p-4"></i></button>
+            </form>
         </div>
     </div>
 </div>

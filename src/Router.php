@@ -31,8 +31,8 @@
             require CONTROLLER . 'ArticleController.php';
             articleDelete($matches[1]);
         }
-        elseif($_SERVER['REQUEST_URI'] == '404') {
+        elseif($_SERVER['REQUEST_URI'] == '404.php') {
             echo 'PAGE NON TROUVE';
-        }
+        } 
     }
 ?>

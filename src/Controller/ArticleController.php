@@ -9,7 +9,11 @@
     function articleShow($slug) {
         require MODEL.'Article.php';
         $article = getArticle($slug);
-        require VIEW.'Articles/show.php';
+        if ($article) {
+            require VIEW.'Articles/show.php';
+        } else {
+            header('Location: /404');
+        }
     }
 
     function articleCreate() {

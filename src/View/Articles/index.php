@@ -15,11 +15,15 @@ foreach ($articles as $article) {
 <div class="container mx-auto">
     <div class="p-4 text-gray-800 bg-gray-400">
         <h1 class="mb-9 text-6xl font-bold leading-none tracking-tight text-gray-800 text-center"><?php echo $article['title'];?></h1>
-        <p class="leading-normal text-center"><?php echo $article['contenu'];?></p>
-        <div class="flex justify-between items-center">
+        <p class="leading-normal text-center break-words"><?php echo $article['contenu'];?></p>
+        <div class="">
             <div class="md:text-4xl">Jan 13 7 PM</div>
-            <a href="/articles/<?php echo $article['slug'];?>"><i class="fas fa-eye"></i></a>
-        </div>
+                <div class="flex justify-between items-center">
+                <form action="/articles/<?php echo $article['slug']?>/edit" method="post">
+            <button class="text-right" type="submit"><i class="fas fa-edit bg-gray-500 p-4"></i></button>
+                </form>
+            <a href="/articles/<?php echo $article['slug'];?>"><i class="fas fa-eye  bg-gray-500 p-4"></i></a>
+                </div>
     </div>
 </div>
             
